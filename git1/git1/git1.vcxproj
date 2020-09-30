@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="git1.cpp" />
+    <ClCompile Include="Myheader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyHeader.h" />

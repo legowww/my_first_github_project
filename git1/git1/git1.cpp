@@ -9,34 +9,30 @@ int main()
 	Position userPos;
 	Position userSta(0, 0);
 	Position userEnd(11, 8);
-	setMaze2(Maze);
+	setMaze(Maze);
 
-	print2(Maze, userPos);
+	print(Maze, userPos);
 
 	while (1)
 	{
 		system("cls");
-		print2(Maze, userPos);
+		print(Maze, userPos);
 
 		if (userPos.xPos() == userEnd.xPos() && userPos.yPos() == userEnd.yPos())
 		{
 			cout << "[clear!]" << endl;
-			system("pause");
 			break;
 		}
 
-		cout << "[move] W A S D [exit] Q : ";
+		cout << "[이동] W A S D [종료] Q " << endl;
 
-		char Input = _getch();
+		char Input = _getch(); // conio.h 추가
 
 		if (Input == 'q' || Input == 'Q')
 			break;
 
-		movePlayer2(Maze, userPos, Input);
+		movePlayer(Maze, userPos, Input);
 	}
-	
 
-
-	
-	
+	return 0;
 }
